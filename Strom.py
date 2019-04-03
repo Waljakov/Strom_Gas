@@ -1,3 +1,9 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#
+# Strom
+# Mit diesem Skript kann der veranschlagte Stromverbrauch mit dem realen verglichen werden
+
 import matplotlib.pyplot as plt 
 import matplotlib.dates as dates
 import numpy as np
@@ -94,7 +100,7 @@ fig, ax = plt.subplots()
 ax.plot(dates_list_all, stand_all, marker=".", markersize=7, ls="-.", lw=0.5, label="Gemessen")
 ax.plot(dates.num2date(xfit_all), linfit(xfit_all), lw=0.5, label="Durchschnitt der Auswahl")
 ax.plot(dates.num2date(xfit_all), veranschlagt(dates_numbers_all[0],xfit_all)+stand_all[0], lw=1, label="Veranschlagt")
-plt.ylabel("Zählerstand /kWh")
+plt.ylabel("Zaehlerstand /kWh")
 plt.grid()
 plt.title("Stromverbrauch")
 ax.set_ylim(stand_all[0])
